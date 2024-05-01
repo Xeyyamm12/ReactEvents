@@ -1,21 +1,20 @@
-import { useState } from 'react'
-import './App.css'
-
-import { Form } from './Components/UserLogin/Form/Form'
-import { Button } from './Components/UserLogin/Form/Button/Button'
-import { Email } from './Components/UserLogin/Form/Email/Email'
-import { Password } from './Components/UserLogin/Form/Password/Password'
+import { useEffect, useState } from "react";
+import "./App.css";
+import { fetchClients } from "./Components/TaskRendering/FetchClients";
+import ClientCard from "./Components/TaskRendering/ClientCard";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [state, setState] = useState(null);
+  useEffect(() => {
+    fetchClients().then((client) => {
+      setState(client);
+    });
+  }, []);
   return (
     <>
-        <Email/>
-        <Password/>
-        <Button/>
-     </>  
-  )
+      <ClientCard {...state} />
+    </>
+  );
 }
 
-export default App
+export default App;
