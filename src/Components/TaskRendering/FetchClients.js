@@ -8,6 +8,9 @@ const clients = [
     { name: "Sam", phone: "", card: "0711 2279 6389 6376" },
     { name: "Max", phone: "+7 456 433 34 67", card: "" },
     { name: "Bill", phone: "+7 753 832 32 42", card: "" },
+    { name: "Xeyyam", phone: "+994 50 492 09 01", card: "yoxdu qaqa" },
+    { name: "Eltac", phone: "+994 70 237 37 69", card: " var demirem" },
+    { name: "Murat", phone: "+994 55 349 58 05", card: " var bunuda demirem" },
     { name: "Helen", phone: "", card: "9653 7820 9765 7543" }
   ];
   export const fetchClients = () =>
